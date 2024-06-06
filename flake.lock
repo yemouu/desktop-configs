@@ -1,0 +1,121 @@
+{
+  "nodes": {
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1717525419,
+        "narHash": "sha256-5z2422pzWnPXHgq2ms8lcCfttM0dz+hg+x1pCcNkAws=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "a7117efb3725e6197dd95424136f79147aa35e5b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1717602782,
+        "narHash": "sha256-pL9jeus5QpX5R+9rsp3hhZ+uplVHscNJh8n8VpqscM0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e8057b67ebf307f01bdcc8fba94d94f75039d1f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1717265169,
+        "narHash": "sha256-IITcGd6xpNoyq9SZBigCkv4+qMHSqot0RDPR4xsZ2CA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3b1b4895b2c5f9f5544d02132896aeb9ceea77bc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "release-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1717112898,
+        "narHash": "sha256-7R2ZvOnvd9h8fDd65p0JnB7wXfUvreox3xFdYWd1BnY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6132b0f6e344ce2fe34fc051b72fb46e34f668e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs",
+        "sops-nix": "sops-nix",
+        "yemou-scripts": "yemou-scripts"
+      }
+    },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2",
+        "nixpkgs-stable": "nixpkgs-stable"
+      },
+      "locked": {
+        "lastModified": 1717455931,
+        "narHash": "sha256-8Q6mKSsto8gaGczXd4G0lvawdAYLa5Dlh3/g4hl5CaM=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "d4555e80d80d2fa77f0a44201ca299f9602492a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
+      }
+    },
+    "yemou-scripts": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1716073945,
+        "narHash": "sha256-shkydTbh+5xgZPrfDDSTQqJLRhGFJAovGLlqHm1wMeQ=",
+        "ref": "refs/heads/master",
+        "rev": "1e613a83ce282fb09084b3df97c0b42a483c2390",
+        "revCount": 28,
+        "type": "git",
+        "url": "https://codeberg.org/yemou/scripts"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/yemou/scripts"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
