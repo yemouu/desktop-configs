@@ -13,23 +13,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, sops-nix, home-manager, ... }@attrs: {
-    nixosConfigurations = {
-      lutea = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = attrs;
-        modules = [
-          ./lutea/config.nix
-          sops-nix.nixosModules.sops
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.extraSpecialArgs = attrs;
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.mou = import ./lutea/home.nix;
-          }
-        ];
-      };
+  outputs = { self, nixpkgs, sops-nix, home-manager, ... }@inputs:
+    let genSystemConfigs = nixpkgs.lib.genAttrs [ "lutea" ]; in {
+      nixosConfigurations = genSystemConfigs (hostname:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = inputs;
+          modules = [
+            ./${hostname}/config.nix
+            sops-nix.nixosModules.sops
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = inputs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.mou = import ./${hostname}/home.nix;
+              };
+            }
+          ];
+        });
     };
-  };
 }
