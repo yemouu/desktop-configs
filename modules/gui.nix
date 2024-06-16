@@ -32,6 +32,7 @@
 
   users.users.mou.packages = with pkgs; [
     foot
+    gnome.adwaita-icon-theme
     keepassxc
     mpv
     syncthing
