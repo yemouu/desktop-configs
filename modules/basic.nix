@@ -36,7 +36,7 @@
       man-pages-posix
       age # Needed for sops-nix
       sops # Needed for sops-nix
-      croc # General useful tool
+      magic-wormhole-rs # General useful tool
     ];
   };
 
