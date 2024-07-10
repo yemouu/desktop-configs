@@ -19,7 +19,6 @@
       wayland.enable = true;
       enable = true;
     };
-    flatpak.enable = true;
     geoclue2.enable = true;
     xserver.wacom.enable = true;
   };
