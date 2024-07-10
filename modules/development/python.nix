@@ -1,8 +1,3 @@
 { pkgs, ... }: {
-  users.users.mou.packages = (with pkgs; [
-    ruff
-  ]) ++
-  (with pkgs.python3Packages; [
-    ruff-lsp
-  ]);
+  users.users.mou.packages = [ pkgs.ruff pkgs.python3Packages.ruff-lsp ];
 }

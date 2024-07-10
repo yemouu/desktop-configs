@@ -1,11 +1,6 @@
 { pkgs, ... }: {
   imports = [ ./unfree.nix ];
-
-  unfree.allowed = [
-    "steam"
-    "steam-original"
-    "steam-run"
-  ];
+  unfree.allowed = [ "steam" "steam-original" "steam-run" ];
 
   services.udev.packages = with pkgs; [ game-devices-udev-rules ];
 

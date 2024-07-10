@@ -1,5 +1,3 @@
 { pkgs, ... }: {
-  users.users.mou.packages = with pkgs; [
-    gopls
-  ];
+  users.users.mou.packages = with pkgs; [ gopls ];
 }
