@@ -3,7 +3,7 @@
     # dino
     # gajim
     # kaidan
-    # signal-desktop
+    signal-desktop
     thunderbird
   ];
 }
