@@ -28,42 +28,36 @@
 
   fileSystems = {
     "/" = {
-      device = "UUID=e0b979fb-2c29-4e0b-910f-c89e4959c9a0";
-      fsType = "bcachefs";
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "mode=755" ];
+    };
+    "/data" = {
+      device = "/dev/disk/by-uuid/7bf830d4-189d-4e9b-bcb0-565f4ac69e67";
+      fsType = "btrfs";
+      options = [ "subvol=@nixos/data" "compress=zstd" "discard=async" ];
+      neededForBoot = true;
+    };
+    "/nix" = {
+      device = "/dev/disk/by-uuid/7bf830d4-189d-4e9b-bcb0-565f4ac69e67";
+      fsType = "btrfs";
+      options = [ "subvol=@nixos/nix" "compress=zstd" "discard=async" ];
+    };
+    "/config" = {
+      device = "/dev/disk/by-uuid/7bf830d4-189d-4e9b-bcb0-565f4ac69e67";
+      fsType = "btrfs";
+      options = [ "subvol=@nixos/config" "compress=zstd" "discard=async" ];
+    };
+    "/home/mou" = {
+      device = "/dev/disk/by-uuid/7bf830d4-189d-4e9b-bcb0-565f4ac69e67";
+      fsType = "btrfs";
+      options = [ "subvol=@home/mou" "compress=zstd" "discard=async" ];
     };
     "/boot" = {
       device = "/dev/disk/by-uuid/862D-85DB";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" "defaults" ];
     };
-
-    # # Impermanence
-    # "/" = {
-    #   device = "none";
-    #   fsType = "tmpfs";
-    #   options = [ "mode=755" ];
-    # };
-    # "/boot" = {
-    #   device = "/dev/disk/by-uuid/862D-85DB";
-    #   fsType = "vfat";
-    #   options = [ "defaults" "fmask=0077" "dmask=0077" ];
-    # };
-    #"/nix" = {
-    #  device = "UUID=e0b979fb-2c29-4e0b-910f-c89e4959c9a0";
-    #  fsType = "bcachefs";
-    #  options = [ "defaults" "X-mount.subdir=nix-store" ];
-    #};
-    #"/home-mou" = {
-    #  device = "UUID=e0b979fb-2c29-4e0b-910f-c89e4959c9a0";
-    #  fsType = "bcachefs";
-    #  options = [ "defaults" "X-mount.subdir=home-mou" ];
-    #  neededForBoot = true; # This has the decryption key
-    #};
-    #"/home/mou" = {
-    #  device = "none";
-    #  fsType = "tmpfs";
-    #  options = [ "mode=750" "gid=1000" "uid=1000" ];
-    #};
   };
 
   hardware = {

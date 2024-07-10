@@ -8,7 +8,7 @@
   sops = {
     defaultSopsFile = ../secrets/lutea.yaml;
     defaultSopsFormat = "yaml";
-    age.keyFile = "/home/mou/.config/sops/age/keys.txt";
+    age.keyFile = "/data/keys.txt";
   };
 
   networking.hostName = "lutea";
