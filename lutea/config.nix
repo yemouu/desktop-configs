@@ -2,7 +2,21 @@
   imports = [
     ./hardware.nix
     ./packages.nix
-    ../modules
+    ../modules/audio.nix
+    ../modules/basic.nix
+    ../modules/browsers.nix
+    ../modules/creation.nix
+    ../modules/development
+    ../modules/editor.nix
+    ../modules/flatpak.nix
+    ../modules/fonts.nix
+    ../modules/games.nix
+    ../modules/gui.nix
+    ../modules/im.nix
+    ../modules/kde.nix
+    ../modules/netbird.nix
+    ../modules/nix.nix
+    ../modules/printing.nix
   ];
 
   sops = {
