@@ -1,5 +1,4 @@
 { pkgs, yemou-scripts, ... }: {
-
   nixpkgs.overlays = [ yemou-scripts.overlays.default ];
 
   environment.pathsToLink = [ "/share/xsessions" "/share/wayland-sessions" ];
@@ -31,8 +30,8 @@
   };
 
   users.users.mou.packages = with pkgs; [
+    adwaita-icon-theme
     foot
-    gnome.adwaita-icon-theme
     keepassxc
     mpv
     syncthing
