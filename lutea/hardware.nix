@@ -1,6 +1,4 @@
-{ lib, pkgs, modulesPath, ... }:
-
-{
+{ lib, pkgs, modulesPath, ... }: {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
@@ -76,10 +74,9 @@
     };
     cpu.intel.updateMicrocode = true;
     uinput.enable = true;
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
       extraPackages = with pkgs; [ intel-media-driver ];
     };
   };
