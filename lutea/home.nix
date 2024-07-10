@@ -35,19 +35,5 @@
     SLURP_ARGS = "-b 00000040 -w 0";
   };
 
-  programs = {
-    git = {
-      enable = true;
-      userEmail = "dev@lilac.pink";
-      userName = "yemou";
-      extraConfig = {
-        commit.gpgsign = true;
-        gpg.format = "ssh";
-        user.signingkey = "~/.ssh/id_ed25519.pub";
-        gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
-      };
-    };
-  };
-
   home.stateVersion = "24.05";
 }
