@@ -15,6 +15,6 @@
 
   users.users.mou = {
     extraGroups = [ "gamemode" ];
-    packages = with pkgs; [ r2modman ];
+    packages = with pkgs; [ r2modman superTuxKart ];
   };
 }
