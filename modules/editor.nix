@@ -4,7 +4,7 @@
       EDITOR = "kak";
       VISUAL = "kak";
     };
-    systemPackages = with pkgs; [ file kakoune ];
+    systemPackages = with pkgs; [ file kakoune-unwrapped ];
   };
 
   users.users.mou.packages = with pkgs; [ kak-lsp ];
