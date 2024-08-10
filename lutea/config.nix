@@ -12,6 +12,7 @@
     ../modules/fonts.nix
     ../modules/games.nix
     ../modules/gui.nix
+    ../modules/hardware-keys.nix
     ../modules/im.nix
     ../modules/kde.nix
     ../modules/netbird.nix
