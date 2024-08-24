@@ -7,5 +7,5 @@
     systemPackages = with pkgs; [ file kakoune-unwrapped ];
   };
 
-  users.users.mou.packages = with pkgs; [ kak-lsp ];
+  users.users.mou.packages = with pkgs; [ kakoune-lsp ];
 }

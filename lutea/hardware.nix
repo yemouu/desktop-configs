@@ -18,10 +18,7 @@
       timeout = 0;
     };
     supportedFilesystems = [ "ntfs" ];
-    tmp = {
-      useTmpfs = true;
-      tmpfsSize = "100%";
-    };
+    tmp.useTmpfs = true;
   };
 
   zramSwap.enable = true;

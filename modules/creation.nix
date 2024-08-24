@@ -1,3 +1,6 @@
 { pkgs, ... }: {
-  users.users.mou.packages = with pkgs; [ inkscape ];
+  users.users.mou.packages = with pkgs; [
+    blender
+    inkscape
+  ];
 }
