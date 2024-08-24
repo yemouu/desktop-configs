@@ -30,6 +30,11 @@
   services.thermald.enable = true;
   users.users.mou.extraGroups = [ "libvirtd" ];
 
+  nix.settings = {
+    cores = 4;
+    max-jobs = 4;
+  };
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older
   # NixOS versions. Most users should NEVER change this value after the initial install, for any
