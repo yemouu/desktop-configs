@@ -16,6 +16,7 @@
 
   outputs = { self, nixpkgs, impermanence, sops-nix, home-manager, ... }@inputs:
     let genSystemConfigs = nixpkgs.lib.genAttrs [ "lutea" ]; in {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = genSystemConfigs (hostname:
         nixpkgs.lib.nixosSystem {
           specialArgs = inputs;
