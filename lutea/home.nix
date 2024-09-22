@@ -13,13 +13,13 @@
     userDirs = {
       enable = true;
       desktop = "${config.home.homeDirectory}/misc/.desktop";
-      documents = "${config.home.homeDirectory}/docs";
+      documents = "${config.home.homeDirectory}/doc";
       download = "${config.home.homeDirectory}/dls";
       music = "${config.home.homeDirectory}/aud";
-      pictures = "${config.home.homeDirectory}/pics";
+      pictures = "${config.home.homeDirectory}/pic";
       publicShare = "${config.home.homeDirectory}/misc/.public";
       templates = "${config.home.homeDirectory}/misc/.templates";
-      videos = "${config.home.homeDirectory}/vids";
+      videos = "${config.home.homeDirectory}/vid";
     };
   };
 

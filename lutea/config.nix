@@ -13,6 +13,7 @@
     ../modules/games.nix
     ../modules/gui.nix
     ../modules/hardware-keys.nix
+    ../modules/home-mounts.nix
     ../modules/im.nix
     ../modules/kde.nix
     ../modules/netbird.nix
