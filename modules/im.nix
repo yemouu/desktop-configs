@@ -1,9 +1,3 @@
 { pkgs, ... }: {
-  users.users.mou.packages = with pkgs; [
-    # dino
-    # gajim
-    # kaidan
-    signal-desktop
-    thunderbird
-  ];
+  users.users.mou.packages = with pkgs; [ thunderbird ];
 }
