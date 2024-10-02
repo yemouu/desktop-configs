@@ -45,7 +45,6 @@
   users.users.mou.packages = with pkgs; [
     adwaita-icon-theme
     foot
-    keepassxc
     mpv
     syncthing
     thm
