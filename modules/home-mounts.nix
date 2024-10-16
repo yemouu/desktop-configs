@@ -57,6 +57,7 @@ in
   systemd.tmpfiles.rules = [
     "d ${homeDir}/dls - mou mou 7d -"
     "d ${homeDir}/.cache - mou mou 14d -"
+    "x ${homeDir}/.cache/nix/tarball-cache/.git - - - 14d -"
     "L ${homeDir}/.var - - - - ${homeDir}/misc/.app-data/flatpak-var"
     "L ${homeDir}/.mozilla - - - - ${homeDir}/misc/.app-data/mozilla"
     "L ${homeDir}/.thunderbird - - - - ${homeDir}/misc/.app-data/thunderbird"
