@@ -5,6 +5,7 @@
     ../modules/audio.nix
     ../modules/basic.nix
     ../modules/browsers.nix
+    ../modules/cloud-storage.nix
     ../modules/creation.nix
     ../modules/development
     ../modules/editor.nix
