@@ -60,7 +60,6 @@ in
     "x ${homeDir}/.cache/nix/tarball-cache/.git - - - 14d -"
     "L ${homeDir}/.var - - - - ${homeDir}/misc/.app-data/flatpak-var"
     "L ${homeDir}/.mozilla - - - - ${homeDir}/misc/.app-data/mozilla"
-    "L ${homeDir}/.thunderbird - - - - ${homeDir}/misc/.app-data/thunderbird"
     "L ${homeDir}/.ssh - - - - ${homeDir}/misc/.app-data/ssh"
   ];
 }
