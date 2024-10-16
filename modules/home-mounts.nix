@@ -59,7 +59,6 @@ in
     "d ${homeDir}/.cache - mou mou 14d -"
     "x ${homeDir}/.cache/nix/tarball-cache/.git - - - 14d -"
     "L ${homeDir}/.var - - - - ${homeDir}/misc/.app-data/flatpak-var"
-    "L ${homeDir}/.mozilla - - - - ${homeDir}/misc/.app-data/mozilla"
     "L ${homeDir}/.ssh - - - - ${homeDir}/misc/.app-data/ssh"
   ];
 }
