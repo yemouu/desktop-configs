@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  users.users.mou.packages = with pkgs;[ seafile-client ];
+  users.users.mou.packages = with pkgs;[ nextcloud-client ];
 }
