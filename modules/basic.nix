@@ -20,7 +20,6 @@
         "/var/lib/systemd/coredump"
         { directory = "/var/lib/private"; mode = "0700"; }
       ];
-      files = [ "/etc/machine-id" ];
     };
     sessionVariables = {
       XDG_CACHE_HOME = "$HOME/.cache";
