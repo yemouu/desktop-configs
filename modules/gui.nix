@@ -3,8 +3,6 @@
 
   environment.pathsToLink = [ "/share/xsessions" "/share/wayland-sessions" ];
 
-  systemd.tmpfiles.rules = [ "C+ /usr/share/wallpapers - - - 1d /home/mou/misc/syncthing/media/images/wallpapers" ];
-
   xdg = {
     mime.enable = true;
     icons.enable = true;
