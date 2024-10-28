@@ -49,7 +49,6 @@
   users.users.mou.packages = with pkgs; [
     foot
     mpv
-    syncthing
     thm
     wl-clipboard
     xdg-user-dirs
