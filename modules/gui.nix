@@ -1,8 +1,6 @@
 { pkgs, yemou-scripts, ... }: {
   nixpkgs.overlays = [ yemou-scripts.overlays.default ];
 
-  environment.pathsToLink = [ "/share/xsessions" "/share/wayland-sessions" ];
-
   xdg = {
     mime.enable = true;
     icons.enable = true;
