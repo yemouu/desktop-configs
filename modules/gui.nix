@@ -19,22 +19,17 @@
     desktopManager.plasma6.enable = true;
     geoclue2.enable = true;
     xserver.wacom.enable = true;
+    greetd = {
+      enable = true;
+      settings.default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -tr --remember-session";
+        user = "greeter";
+      };
+    };
   };
 
   programs = {
     dconf.enable = true;
-    regreet = {
-      enable = true;
-      cageArgs = [ "-s" "-m" "last" ];
-      font = {
-        package = pkgs.ibm-plex;
-        name = "IBM Plex Sans";
-      };
-      settings.background = {
-        path = "/usr/share/wallpapers/dark/evie-s-eS5hOjf9wwg-unsplash.jpg";
-        fit = "Cover";
-      };
-    };
     river = {
       enable = true;
       extraPackages = with pkgs; [ bemenu swaylock ];
