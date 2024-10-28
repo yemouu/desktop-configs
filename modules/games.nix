@@ -18,7 +18,10 @@
       # this option currently doesn't work when running inside of steam likely due to bubblewrap
       # capSysNice = true;
     };
-    steam.enable = true;
+    steam = {
+      enable = true;
+      extraPackages = with pkgs; [ adwaita-icon-theme ];
+    };
   };
 
   users.users.mou = {

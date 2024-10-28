@@ -42,8 +42,11 @@
     xwayland.enable = true;
   };
 
+  # System-wide packages
+  environment. systemPackages = with pkgs; [ adwaita-icon-theme ];
+
+  # Per-user packages
   users.users.mou.packages = with pkgs; [
-    adwaita-icon-theme
     foot
     mpv
     syncthing
