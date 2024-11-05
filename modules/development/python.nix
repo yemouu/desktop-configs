@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  users.users.mou.packages = with pkgs; [ ruff ruff-lsp ];
+  users.users.mou.packages = with pkgs; [ ruff ];
 }
