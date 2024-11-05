@@ -55,5 +55,6 @@
     thm
     wl-clipboard
     xdg-user-dirs
+    zathura
   ];
 }
