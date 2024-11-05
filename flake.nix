@@ -12,6 +12,9 @@
       # url = "path:/data/local-flakes/scripts";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nixpkgs PRs
+    nixpkgs-ostree.url = "github:rawkode/nixpkgs/chore/update-ostree";
   };
 
   outputs = { self, nixpkgs, impermanence, sops-nix, home-manager, ... }@inputs:
