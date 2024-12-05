@@ -14,6 +14,17 @@
   ];
 
   xdg = {
+    portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+      config.river = {
+        default = lib.mkForce "gtk";
+        "org.freedesktop.impl.portal.Screenshot" = "wlr";
+        "org.freedesktop.impl.portal.ScreenCast" = "wlr";
+        "org.freedesktop.impl.portal.Inhibit" = "none";
+      };
+    };
     mime.enable = true;
     icons.enable = true;
   };
@@ -24,7 +35,6 @@
 
   services = {
     dbus.enable = true;
-    desktopManager.plasma6.enable = true;
     geoclue2.enable = true;
     xserver.wacom.enable = true;
     greetd = {
@@ -40,7 +50,26 @@
     dconf.enable = true;
     river = {
       enable = true;
-      extraPackages = with pkgs; [ bemenu swaylock ];
+      package = pkgs.river.overrideAttrs (final: prev: {
+        postInstall = ''
+          echo 'DesktopNames=river;wlroots' >> contrib/river.desktop
+        '' + prev.postInstall;
+      });
+      extraPackages = with pkgs; [
+        bemenu
+        chayang
+        kanshi
+        mako
+        nautilus
+        scr
+        slurp
+        swaybg
+        swayidle
+        swaylock
+        waybar
+        wlopm
+        wlsunset
+      ];
     };
     xwayland.enable = true;
   };

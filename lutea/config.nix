@@ -16,7 +16,6 @@
     ../modules/hardware-keys.nix
     ../modules/home-mounts.nix
     ../modules/im.nix
-    ../modules/kde.nix
     ../modules/machine-id.nix
     ../modules/netbird.nix
     ../modules/nix.nix
