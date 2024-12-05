@@ -67,6 +67,7 @@
   # Per-user packages
   users.users.mou.packages = with pkgs; [
     foot
+    keepassxc
     mpv
     thm
     wl-clipboard
