@@ -22,6 +22,7 @@
     gc.automatic = true;
     settings = {
       auto-optimise-store = true;
+      download-buffer-size = 134217728;
       experimental-features = [ "nix-command" "flakes" ];
       keep-going = true;
       use-xdg-base-directories = true;
