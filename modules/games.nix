@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   imports = [ ./unfree.nix ];
   unfree.allowed = [
+    "modrinth-app"
+    "modrinth-app-unwrapped"
     "steam"
     "steam-original"
     "steam-run"
@@ -32,6 +34,7 @@
   users.users.mou = {
     extraGroups = [ "gamemode" ];
     packages = with pkgs; [
+      modrinth-app
       r2modman
       superTuxKart
     ];
