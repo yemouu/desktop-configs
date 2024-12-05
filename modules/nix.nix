@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ nixpkgs, pkgs, ... }: {
   systemd = {
     services.nix-daemon.environment.TMPDIR = "/nix/tmp";
     tmpfiles.rules = [ "d /nix/tmp - root root 1d" ];
@@ -17,6 +17,7 @@
   ];
 
   nix = {
+    nixPath = [ "nixpkgs=${nixpkgs}" ];
     optimise.automatic = true;
     gc.automatic = true;
     settings = {
