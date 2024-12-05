@@ -4,6 +4,7 @@
     "passwordHashes/mou".neededForUsers = true;
   };
 
+  i18n.defaultLocale = "C.UTF-8";
   time.timeZone = "America/New_York";
 
   environment = {
