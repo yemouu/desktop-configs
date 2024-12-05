@@ -24,7 +24,6 @@
   services = {
     dbus.enable = true;
     geoclue2.enable = true;
-    xserver.wacom.enable = true;
     greetd = {
       enable = true;
       settings.default_session = {
